@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="android.esisa.noteappv2.Activities.MainActivity">
+
+    <item
+        android:id="@+id/search_icon"
+        android:title="search"
+        android:iconifiedByDefault="false"
+        android:icon="@drawable/ic_search_black_24dp"
+        app:showAsAction="ifRoom|collapseActionView"
+        app:actionViewClass="android.widget.SearchView">
+
+    </item>
+
+</menu>
