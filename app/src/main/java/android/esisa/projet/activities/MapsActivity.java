@@ -109,10 +109,21 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             public boolean onMarkerClick(Marker marker) {
                 Station station = markerStationMap.get(marker);
                 View view = LayoutInflater.from(MapsActivity.this).inflate(R.layout.custom_dialog, null);
+
                 TextView nameValue = view.findViewById(R.id.nameValue);
                 nameValue.setText(station.getName());
+
+                TextView addressValue = view.findViewById(R.id.addressValue);
+                addressValue.setText(station.getAddress());
+
+                TextView availableBikes = view.findViewById(R.id.availableBikesValue);
+                availableBikes.setText(station.getAvailable_bikes() + "");
+
+                TextView availableBikeStands = view.findViewById(R.id.availableBikeStandsValue);
+                availableBikeStands.setText(station.getAvailable_bike_stands() + "");
                 //
                 AlertDialog.Builder builder = new AlertDialog.Builder(MapsActivity.this)
+                        .setTitle("Station infos")
                         .setPositiveButton("ok", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {

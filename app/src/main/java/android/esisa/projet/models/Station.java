@@ -20,7 +20,7 @@ public class Station implements Serializable {
     private Status status;
     private int bike_stands;
     private int available_bike_stands;
-    private int available_bike;
+    private int available_bikes;
 
     public Station() {
     }
@@ -105,12 +105,11 @@ public class Station implements Serializable {
         this.available_bike_stands = available_bike_stands;
     }
 
-    public int getAvailable_bike() {
-        return available_bike;
+    public int getAvailable_bikes() {
+        return available_bikes;
     }
 
-    public void setAvailable_bike(int available_bike) {
-        this.available_bike = available_bike;
+    public void setAvailable_bikes(int available_bikes) {
+        this.available_bikes = available_bikes;
     }
-
 }
